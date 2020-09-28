@@ -9,11 +9,12 @@ namespace HelloWorld
 {
     class Player
     {
+        //Default variables for the Player class
         private string _name;
         private int _health;
         private int _damage;
-        private Array[] _inventory;
-        private int _gold = 10;
+        private Item[] _inventory;
+        private int _gold;
         
 
         //Default stats for player
@@ -22,23 +23,23 @@ namespace HelloWorld
             _name = "Traveler";
             _health = 100;
             _damage = 10;
+            _gold = 20;
             
         }
 
        
-        //OVerloaded stats for the player
-        public Player(string name, int health, int damage)
+       //Opens the inventory for the player
+        public void OpenInventory(Item[] _inventory)
         {
-            _name = "Strong Traveler";
-            _health = 200;
-            _damage = 30;
+          
         }
 
+        //Prints the current stats for the player
         public void PrintStats()
         {
-            Console.WriteLine(" Name: " + _name);
-            Console.WriteLine(" Health " + _health);
-            Console.WriteLine(" Damage " + _damage);
+            Console.WriteLine(" Health: " + _health);
+            Console.WriteLine(" Damage: " + _damage);
+            Console.WriteLine(" Current Gold: " + _gold);
         }
         
     }

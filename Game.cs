@@ -15,18 +15,28 @@ namespace HelloWorld
     }
     class Game
     {
-        private Player _player;
+        //Calls created varables
+        private bool _gameover = false;
+        private Player _player = new Player();
         
         //Run the game
         public void Run()
         {
-            
+            Start();
+
+            while(_gameover == false)
+            {
+                Update();
+            }
+            End();
         }
 
         //Performed once when the game begins
         public void Start()
         {
             
+            _player.PrintStats();
+            Update();
         }
 
         //Repeated until the game ends
