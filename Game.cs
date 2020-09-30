@@ -18,6 +18,8 @@ namespace HelloWorld
         //Calls created varables
         private bool _gameover = false;
         private Player _player = new Player();
+        private Area _area = new Area();
+       
         
         //Run the game
         public void Run()
@@ -34,7 +36,7 @@ namespace HelloWorld
         //Performed once when the game begins
         public void Start()
         {
-            
+            _area.Area1();
             _player.PrintStats();
             Update();
         }
