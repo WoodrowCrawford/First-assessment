@@ -24,7 +24,7 @@ namespace HelloWorld
             _health = 100;
             _damage = 10;
             _gold = 20;
-            
+            _inventory = new Item[3];
         }
 
        
@@ -32,6 +32,7 @@ namespace HelloWorld
         public void OpenInventory(Item[] _inventory)
         {
             string[] Item = { "Gloves", "More gloves", "A toy" };
+            Console.WriteLine(_inventory.Length);
         }
 
         //Prints the current stats for the player
@@ -40,6 +41,13 @@ namespace HelloWorld
             Console.WriteLine(" Health: " + _health);
             Console.WriteLine(" Damage: " + _damage);
             Console.WriteLine(" Current Gold: " + _gold);
+            
+            
+        }
+
+        public Item[] GetInventory()
+        {
+            return _inventory;
         }
         
     }

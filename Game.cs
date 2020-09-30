@@ -19,6 +19,8 @@ namespace HelloWorld
         private bool _gameover = false;
         private Player _player = new Player();
         private Area _area = new Area();
+        private Map _map = new Map();
+        
        
         
         //Run the game
@@ -48,8 +50,10 @@ namespace HelloWorld
                 if(input == '1')
                 {
                     Console.WriteLine("You take the door to your left.");
-                    _area.Area1();
-                    
+                    _map.GetPlayerLocation(
+
+
+
 
                 }
                 if (input == '2')
@@ -96,7 +100,7 @@ namespace HelloWorld
         //Repeated until the game ends
         public void Update()
         {
-            _area.Area2();
+            
             Console.WriteLine("Pick a room");
             GetInput("Room 1", "Room 2", "Room 3", "Pick a room"); 
             
