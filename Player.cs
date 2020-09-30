@@ -31,7 +31,7 @@ namespace HelloWorld
        //Opens the inventory for the player
         public void OpenInventory(Item[] _inventory)
         {
-          
+            string[] Item = { "Gloves", "More gloves", "A toy" };
         }
 
         //Prints the current stats for the player
