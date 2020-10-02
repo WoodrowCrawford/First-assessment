@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Net;
 using System.Runtime.CompilerServices;
 using System.Text;
 
@@ -24,15 +25,16 @@ namespace HelloWorld
             _health = 100;
             _damage = 10;
             _gold = 20;
-            _inventory = new Item[3];
+            _inventory = new Item [3];
         }
 
        
        //Opens the inventory for the player
-        public void OpenInventory(Item[] _inventory)
+        public Item[] OpenInventory(Item[] _inventory)
         {
             string[] Item = { "Gloves", "More gloves", "A toy" };
             Console.WriteLine(_inventory.Length);
+            return _inventory;
         }
 
         //Prints the current stats for the player
@@ -41,14 +43,14 @@ namespace HelloWorld
             Console.WriteLine(" Health: " + _health);
             Console.WriteLine(" Damage: " + _damage);
             Console.WriteLine(" Current Gold: " + _gold);
-            
+            Console.WriteLine(" Inventory");
             
         }
+       
+        
 
-        public Item[] GetInventory()
-        {
-            return _inventory;
-        }
+
+        
         
     }
 }

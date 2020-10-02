@@ -35,76 +35,21 @@ namespace HelloWorld
             End();
         }
 
-       //Gets various inputs from the player. Used to move between areas.
-        public void GetInput(string option1, string option2, string option3, string query)
-        {
-            char input = ' ';
-            while (input != '1' && input != '2' && input != '3')
-            {
-                Console.WriteLine("1. " + option1, "Pick a room");
-                Console.WriteLine("2. " + option2, "Pick a room");
-                Console.WriteLine("3. " + option3, "Pick a room");
-                Console.Write("> ");
-                input = Console.ReadKey().KeyChar;
-                Console.WriteLine();
-                if(input == '1')
-                {
-                    Console.WriteLine("You take the door to your left.");
-                    _map.GetPlayerLocation(
+       
 
-
-
-
-                }
-                if (input == '2')
-                {
-                    Console.WriteLine("You walk straight ahead.");
-                    _area.Area2();
-                }
-                if (input == '3')
-                {
-                    Console.WriteLine("You take the door to your right.");
-                    _area.Area3();
-                }
-                else if (input != '1' && input != '2' && input != '3')
-                    Console.WriteLine("Please pick one of the available areas.");
-                
-            }
-        }
-
-
-        public void GetInput(string option1, string query)
-        {
-            char input = ' ';
-            while (input != '1')
-            {
-                Console.WriteLine("1. " + option1 , "Go in the room.");
-                Console.Write("> ");
-                input = Console.ReadKey().KeyChar;
-                Console.WriteLine();
-                if(input == '1')
-                {
-                    Console.WriteLine("You continue your journey. That old man is something else.");
-                    
-                }
-            }
-        }
 
         //Performed once when the game begins
         public void Start()
         {
-            
+            Console.WriteLine("Hello there... \n You wake up in a dark area...");
+            Console.ReadLine();
             Update();
         }
 
         //Repeated until the game ends
         public void Update()
         {
-            
-            Console.WriteLine("Pick a room");
-            GetInput("Room 1", "Room 2", "Room 3", "Pick a room"); 
-            
-            _player.PrintStats();
+            _area.Area2();
         }
 
         //Performed once when the game ends
