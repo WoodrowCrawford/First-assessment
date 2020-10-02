@@ -11,9 +11,7 @@ namespace HelloWorld
     class Player
     {
         //Default variables for the Player class
-        private string _name;
         private int _health;
-        private int _damage;
         private Item[] _inventory;
         private int _gold;
         
@@ -21,19 +19,30 @@ namespace HelloWorld
         //Default stats for player
         public Player()
         {
-            _name = "Traveler";
             _health = 100;
-            _damage = 10;
             _gold = 20;
-            _inventory = new Item [3];
+            _inventory = new Item[3];
+        }
+
+        //Makes the player buy an item and put it in their inventory.
+        public bool Buy(Item item, int inventorySlot)
+        {
+            if (_gold >= item.cost)
+            {
+                _gold -= item.cost;
+                _inventory[inventorySlot] = item;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
        
        //Opens the inventory for the player
-        public Item[] OpenInventory(Item[] _inventory)
+        public Item[] OpenInventory()
         {
-            string[] Item = { "Gloves", "More gloves", "A toy" };
-            Console.WriteLine(_inventory.Length);
             return _inventory;
         }
 
@@ -41,10 +50,13 @@ namespace HelloWorld
         public void PrintStats()
         {
             Console.WriteLine(" Health: " + _health);
-            Console.WriteLine(" Damage: " + _damage);
             Console.WriteLine(" Current Gold: " + _gold);
-            Console.WriteLine(" Inventory");
-            
+           
+        }
+
+        public int GetGold()
+        {
+            return _gold;
         }
        
         

@@ -337,7 +337,7 @@ namespace HelloWorld
         {
 
             _areaName = "Area 3";
-            _enemyName = "none";
+            _enemyName = "N/A";
             _enemyHealth = 50;
             _enemyDamage = 10;
 
