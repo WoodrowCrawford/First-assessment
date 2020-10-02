@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.Design.Serialization;
+using System.IO;
 using System.Reflection.Metadata;
 using System.Security.Authentication;
 using System.Text;
@@ -13,8 +14,6 @@ namespace HelloWorld
     {
         private string _areaName;
         private string _enemyName;
-        private int _enemyHealth;
-        private int _enemyDamage;
 
 
 
@@ -272,8 +271,7 @@ namespace HelloWorld
         {
             _areaName = "Area 1";
             _enemyName = "Earl";
-            _enemyHealth = 50;
-            _enemyDamage = 10;
+            
 
             
             ClearScreen();
@@ -315,10 +313,7 @@ namespace HelloWorld
         {
             _areaName = "Area 2";
             _enemyName = "enemies";
-            _enemyHealth = 50;
-            _enemyDamage = 10;
-
-
+            
             
             Console.WriteLine("You are in " + _areaName);
             Console.WriteLine("It's cold here. You wake up on a cold hard stone floor. " +
@@ -337,10 +332,8 @@ namespace HelloWorld
         {
 
             _areaName = "Area 3";
-            _enemyName = "N/A";
-            _enemyHealth = 50;
-            _enemyDamage = 10;
-
+            _enemyName = "mouse";
+           
 
             ClearScreen();
             Console.WriteLine("You are now in " + _areaName);
@@ -348,7 +341,7 @@ namespace HelloWorld
             Console.WriteLine("This time the room is a bit different. There is a bright light bulb in the room." +
                 " It gives off a bright glow. ");
             ClearScreen();
-            Console.WriteLine("You see a mouse run past. You try and chase after it but you fail miserably." +
+            Console.WriteLine("You see a" + _enemyName + "run past. You try and chase after it but you fail miserably." +
                 "The mouse goes in a mouse hole and \n you run into a wall");
             ClearScreen();
             Console.WriteLine("As you recover from your mistake" +
@@ -366,9 +359,7 @@ namespace HelloWorld
         {
             _areaName = "Area 4";
             _enemyName = "Slime";
-            _enemyHealth = 50;
-            _enemyDamage = 10;
-
+            
 
             ClearScreen();
             Console.WriteLine("You are now in " + _areaName);
@@ -385,9 +376,7 @@ namespace HelloWorld
         {
             _areaName = "Area 5";
             _enemyName = "Slime";
-            _enemyHealth = 50;
-            _enemyDamage = 10;
-
+            
 
             ClearScreen();
             Console.WriteLine("You are now in " + _areaName);
@@ -404,9 +393,7 @@ namespace HelloWorld
         {
             _areaName = "Area 6";
             _enemyName = "Slime";
-            _enemyHealth = 50;
-            _enemyDamage = 10;
-
+            
 
             ClearScreen();
             Console.WriteLine("You are now in " + _areaName);
@@ -424,9 +411,7 @@ namespace HelloWorld
         {
             _areaName = "Area 7";
             _enemyName = "Slime";
-            _enemyHealth = 50;
-            _enemyDamage = 10;
-
+            
 
             ClearScreen();
             Console.WriteLine("You are now in " + _areaName);
@@ -442,10 +427,8 @@ namespace HelloWorld
         public void Area8()
         {
             _areaName = "Area 8";
-            _enemyName = "Slime";
-            _enemyHealth = 50;
-            _enemyDamage = 10;
-
+            _enemyName = "N/A";
+            
 
             ClearScreen();
             Console.WriteLine("You are now in " + _areaName);
@@ -461,13 +444,18 @@ namespace HelloWorld
         public void Area9()
         {
             _areaName = "The Final room";
-            _enemyName = "Slime";
-            _enemyHealth = 50;
-            _enemyDamage = 10;
-
+            _enemyName = "Vampire";
+            
 
             ClearScreen();
             Console.WriteLine("You are now in " + _areaName);
+            Console.WriteLine("You found a " + _enemyName + "!");
+            ClearScreen();
+            Console.WriteLine("He stares at you and doesn't look like he wants to attack...");
+            Console.WriteLine("So you walk slowly around him to the exit.");
+            ClearScreen();
+
+            
         }
 
         

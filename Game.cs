@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 namespace HelloWorld
@@ -96,6 +97,7 @@ namespace HelloWorld
                 return;
             }
 
+            StreamWriter writer;
             Console.WriteLine("Where do you want to put this item?");
             PrintInventory(_player.OpenInventory());
             input = Console.ReadKey().KeyChar;

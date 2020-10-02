@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HelloWorld
 {
-    class Store
+    class Store : Area
     {
         private int _gold;
         private Item[] _inventory;
