@@ -89,6 +89,50 @@ namespace HelloWorld
                     }
                     
             }
+            
+            if (_player.GetGold() < _storeInventory[itemNum].cost)
+            {
+                Console.WriteLine("Yeahh... no. You are broke.");
+                return;
+            }
+
+            Console.WriteLine("Where do you want to put this item?");
+            PrintInventory(_player.OpenInventory());
+            input = Console.ReadKey().KeyChar;
+
+            int playerInvNum = -1;
+
+            switch (input)
+            {
+                case '1':
+                    {
+                        playerInvNum = 0;
+                        Console.WriteLine("Thank You!!");
+                        Console.ReadLine();
+                        Console.Clear();
+                        break;
+                    }
+                case '2':
+                    {
+                        playerInvNum = 1;
+                        Console.WriteLine("Thank You!!");
+                        Console.ReadLine();
+                        Console.Clear();
+                        break;
+                    }
+                case '3':
+                    {
+                        playerInvNum = 2;
+                        Console.WriteLine("Thank You!!");
+                        Console.ReadLine();
+                        Console.Clear();
+                        break;
+                    }
+                default:
+                    {
+                        break;
+                    }
+            }
 
             
         }
